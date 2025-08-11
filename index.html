@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <!-- Основни мета тагове -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Счетоводство Ели — Регистрация на фирма, счетоводно обслужване и консултации</title>
+  <meta name="description" content="Професионално счетоводно обслужване, регистрация на фирми и данъчни консултации от Ели. Надежден партньор за вашия бизнес." />
+  <meta name="keywords" content="счетоводство, счетоводител, регистрация на фирма, данъчни консултации, ТРЗ, ДДС, онлайн консултации" />
+  <link rel="canonical" href="https://example.com/" />
+  <meta name="theme-color" content="#4f46e5" />
+
+  <!-- Open Graph за споделяне -->
+  <meta property="og:title" content="Счетоводство Ели" />
+  <meta property="og:description" content="Регистрация на фирма, счетоводно обслужване и данъчни консултации." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop" />
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Леки настройки на тема (синя палитра)
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              300: '#a5b4fc',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#312e81',
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(2, 6, 23, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%236366f1%27/%3E%3Ctext x=%2750%25%27 y=%2755%25%27 font-size=%2748%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27Arial%27%3E%D0%95%3C/text%3E%3C/svg%3E" />
+  <style>
+    /* Гладко скролване за вътрешни линкове */
+    html { scroll-behavior: smooth; }
+  </style>
+  <script defer src="app.js"></script>
+</head>
+<body class="antialiased text-slate-800 bg-white">
+  <!-- Навигация и лого -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Лого (текстово placeholder) -->
+        <a href="#home" class="flex items-center gap-2">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-primary-600 text-white font-semibold">Е</span>
+          <span class="font-semibold text-slate-900">Счетоводство Ели</span>
+        </a>
+
+        <!-- Навигация - десктоп -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#home" class="nav-link text-slate-700 hover:text-primary-700 transition">Начало</a>
+          <a href="#services" class="nav-link text-slate-700 hover:text-primary-700 transition">Услуги</a>
+          <a href="#about" class="nav-link text-slate-700 hover:text-primary-700 transition">За мен</a>
+          <a href="#contact" class="nav-link inline-flex items-center gap-2 px-4 py-2 rounded-md bg-primary-600 text-white hover:bg-primary-700 transition shadow-soft">Свържете се с мен</a>
+        </nav>
+
+        <!-- Бутон за мобилно меню -->
+        <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-primary-500" aria-label="Отвори меню" aria-expanded="false" aria-controls="mobileMenu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Мобилно меню -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <nav class="px-4 py-3 space-y-2">
+        <a href="#home" class="mobile-nav block px-3 py-2 rounded hover:bg-slate-50">Начало</a>
+        <a href="#services" class="mobile-nav block px-3 py-2 rounded hover:bg-slate-50">Услуги</a>
+        <a href="#about" class="mobile-nav block px-3 py-2 rounded hover:bg-сlate-50">За мен</a>
+        <a href="#contact" class="mobile-nav block px-3 py-2 rounded bg-primary-600 text-white hover:bg-primary-700">Свържете се с мен</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero секция -->
+    <section class="relative overflow-hidden">
+      <!-- Декоративен фон -->
+      <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-b from-slate-50 to-white"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="py-20 lg:py-28 grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
+              Надеждно счетоводно обслужване за вашия бизнес
+            </h1>
+            <p class="mt-5 text-lg text-slate-700">
+              Регистрация на фирми, текущо счетоводство, ДДС, ТРЗ и данъчни консултации.
+              Лично отношение и ясна комуникация — за да вземате спокойни бизнес решения.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+              <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-md bg-primary-600 text-white font-medium hover:bg-primary-700 transition shadow-soft">
+                Свържете се с мен
+              </a>
+              <a href="#services" class="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-300 text-slate-700 hover:bg-slate-50 transition">
+                Вижте услугите
+              </a>
+            </div>
+            <div class="mt-6 text-sm text-slate-500">
+              Над 10 години опит с малки и средни предприятия в различни отрасли.
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?q=80&w=1200&auto=format&fit=crop"
+              alt="Работен процес при счетоводно обслужване"
+              class="w-full h-72 см:h-96 object-cover rounded-xl shadow-soft"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="py-16 sm:py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Услуги</h2>
+          <p class="mt-3 text-slate-700">
+            Комплексни решения за стартиращи и утвърдени бизнеси. Прозрачни условия и бърза комуникация.
+          </p>
+        </div>
+
+        <!-- Карти с услуги -->
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Регистрация на фирма -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm hover:shadow-soft transition">
+            <div class="h-12 w-12 rounded-md bg-primary-100 text-primary-700 inline-flex items-center justify-center font-bold">РФ</div>
+            <h3 class="mt-4 font-semibold text-slate-900">Регистрация на фирма</h3>
+            <p class="mt-2 text-sm text-slate-700">
+              Консултация за избор на правна форма, подготовка на документи и подаване към Търговския регистър.
+            </p>
+            <ul class="mt-3 text-sm text-slate-600 list-disc list-inside space-y-1">
+              <li>ЕООД / ООД / ЕТ</li>
+              <li>Регистрация по ДДС</li>
+              <li>Адрес за кореспонденция (по желание)</li>
+            </ul>
+          </article>
+
+          <!-- Счетоводно обслужване -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm hover:shadow-soft transition">
+            <div class="h-12 w-12 rounded-md bg-primary-100 text-primary-700 inline-flex items-center justify-center font-bold">СО</div>
+            <h3 class="mt-4 font-semibold text-slate-900">Счетоводно обслужване</h3>
+            <p class="mt-2 text-sm text-slate-700">
+              Ежедневно осчетоводяване, изготвяне на ДДС дневници, справки и годишно приключване.
+            </p>
+            <ul class="mt-3 text-sm text-slate-600 list-disc list-inside space-y-1">
+              <li>ТРЗ и работни заплати</li>
+              <li>Оборотни ведомости и отчети</li>
+              <li>Представителство пред НАП/НОИ</li>
+            </ul>
+          </article>
+
+          <!-- Данъчни консултации -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm hover:shadow-soft transition">
+            <div class="h-12 w-12 rounded-md bg-primary-100 text-primary-700 inline-flex items-center justify-center font-bold">ДК</div>
+            <h3 class="mt-4 font-semibold text-slate-900">Данъчни консултации</h3>
+            <p class="mt-2 text-sm text-slate-700">
+              Оптимизация на данъчното облагане според дейността ви и планиране на парични потоци.
+            </p>
+            <ul class="mt-3 text-sm text-slate-600 list-disc list-inside space-y-1">
+              <li>ДДС, ЗКПО, ЗДДФЛ</li>
+              <li>Проверки и ревизии</li>
+              <li>Оценка на рискове</li>
+            </ul>
+          </article>
+
+          <!-- Онлайн консултации -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm hover:shadow-soft transition">
+            <div class="h-12 w-12 rounded-md bg-primary-100 text-primary-700 inline-flex items-center justify-center font-bold">ОК</div>
+            <h3 class="mt-4 font-semibold text-slate-900">Онлайн консултации</h3>
+            <p class="mt-2 text-sm text-slate-700">
+              Срещи през Zoom/Teams с гъвкави часове. Бързи отговори и ясно обяснение на казусите ви.
+            </p>
+            <ul class="mt-3 text-sm text-slate-600 list-disc list-inside space-y-1">
+              <li>Резервация за до 48 часа</li>
+              <li>Запис на срещата (по желание)</li>
+              <li>Обратна връзка с насоки</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Клиенти (логота) -->
+    <section id="clients" class="py-12 sm:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Клиенти и партньори</h2>
+          <p class="mt-3 text-slate-700">Част от брандовете, които са ми се доверили.</p>
+        </div>
+        <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 items-center">
+          <img src="https://dummyimage.com/160x80/e2e8f0/475569.png&text=%D0%9B%D0%BE%D0%B3%D0%BE+1" alt="Лого на клиент 1" class="h-12 w-full object-contain grayscale hover:grayscale-0 transition" loading="lazy" />
+          <img src="https://dummyimage.com/160x80/e2e8f0/475569.png&text=%D0%9B%D0%BE%D0%B3%D0%BE+2" alt="Лого на клиент 2" class="h-12 w-full object-contain grayscale hover:grayscale-0 transition" loading="lazy" />
+          <img src="https://dummyimage.com/160x80/e2e8f0/475569.png&text=%D0%9B%D0%BE%D0%B3%D0%BE+3" alt="Лого на клиент 3" class="h-12 w-full object-contain grayscale hover:grayscale-0 transition" loading="lazy" />
+          <img src="https://dummyimage.com/160x80/e2e8f0/475569.png&text=%D0%9B%D0%BE%D0%B3%D0%BE+4" alt="Лого на клиент 4" class="h-12 w-full object-contain grayscale hover:grayscale-0 transition" loading="lazy" />
+          <img src="https://dummyimage.com/160x80/e2e8f0/475569.png&text=%D0%9B%D0%BE%D0%B3%D0%BE+5" alt="Лого на клиент 5" class="h-12 w-full object-contain grayscale hover:grayscale-0 transition" loading="lazy" />
+          <img src="https://dummyimage.com/160x80/e2e8f0/475569.png&text=%D0%9B%D0%BE%D0%B3%D0%BE+6" alt="Лого на клиент 6" class="h-12 w-full object-contain grayscale hover:grayscale-0 transition" loading="lazy" />
+        </div>
+        <p class="mt-4 text-xs text-slate-500">Заменете изображенията с реалните логота на вашите клиенти.</p>
+      </div>
+    </section>
+
+    <!-- За мен -->
+    <section id="about" class="py-16 sm:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
+        <div class="order-2 lg:order-1">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">За мен</h2>
+          <p class="mt-4 text-slate-700">
+            Казвам се Ели — дипломиран счетоводител с над десет години практика. Работя с
+            предприемачи, фрийлансъри и малки компании, като помагам със старта, развитието и
+            ежедневните финансови решения. Ценя прозрачността и навременната комуникация.
+          </p>
+          <p class="mt-4 text-slate-700">
+            Вярвам, че доброто счетоводство е стабилната основа за устойчив бизнес. Моята мисия е да
+            превърна сложните правила в ясни стъпки, за да планирате уверено.
+          </p>
+          <div class="mt-6">
+            <a href="#contact" class="inline-flex items-center px-5 py-3 rounded-md bg-primary-600 text-white hover:bg-primary-700 transition shadow-soft">
+              Запази консултация
+            </a>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2">
+          <img
+            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop"
+            alt="Портрет на счетоводител"
+            class="w-full h-80 object-cover rounded-xl shadow-soft"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакти -->
+    <section id="contact" class="py-16 sm:py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-10">
+          <!-- Инфо -->
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Контакт</h2>
+            <p class="mt-4 text-slate-700">
+              Изпратете запитване чрез формата. Обикновено отговарям в рамките на 1 работен ден.
+            </p>
+            <div class="mt-6 space-y-3 text-slate-700">
+              <p><span class="font-semibold">Имейл:</span> <a class="text-primary-700 hover:underline" href="mailto:eli.ivanova.accounting@example.com">eli.ivanova.accounting@example.com</a></p>
+              <p><span class="font-semibold">Телефон:</span> <a class="text-primary-700 hover:underline" href="tel:+359888123456">+359 888 123 456</a></p>
+              <p><span class="font-semibold">Адрес:</span> София (работя и дистанционно в цялата страна)</p>
+            </div>
+            <div class="mt-6 text-sm text-slate-500">
+              Работно време: Понеделник – Петък, 9:00 – 18:00
+            </div>
+            <noscript>
+              <p class="mt-6 p-3 rounded bg-yellow-50 text-yellow-800 border border-yellow-200">
+                Внимание: За да изпратите формата, активирайте JavaScript в браузъра.
+              </p>
+            </noscript>
+          </div>
+
+          <!-- Форма за контакт (изпраща към Google Apps Script чрез app.js) -->
+          <div>
+            <form id="contactForm" novalidate class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-slate-700">Име и фамилия</label>
+                  <input id="name" name="name" type="text" required
+                         class="mt-1 block w-full rounded-md border-slate-300 focus:border-primary-600 focus:ring-primary-600"
+                         placeholder="Вашето име" />
+                  <p data-error-for="name" class="mt-1 text-xs text-red-600 hidden"></p>
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-slate-700">Имейл</label>
+                  <input id="email" name="email" type="email" required
+                         class="mt-1 block w-full rounded-md border-slate-300 focus:border-primary-600 focus:ring-primary-600"
+                         placeholder="name@example.com" />
+                  <p data-error-for="email" class="mt-1 text-xs text-red-600 hidden"></p>
+                </div>
+                <div>
+                  <label for="phone" class="block text см font-medium text-slate-700">Телефон</label>
+                  <input id="phone" name="phone" type="tel" inputmode="tel" pattern="^[0-9+()\\s-]{6,20}$"
+                         class="mt-1 block w-full rounded-md border-slate-300 focus:border-primary-600 focus:ring-primary-600"
+                         placeholder="+359 ..." />
+                  <p data-error-for="phone" class="mt-1 text-xs text-red-600 hidden"></p>
+                </div>
+                <div>
+                  <label for="topic" class="block text-sm font-medium text-slate-700">Тема</label>
+                  <input id="topic" name="topic" type="text"
+                         class="mt-1 block w-full rounded-md border-slate-300 focus:border-primary-600 focus:ring-primary-600"
+                         placeholder="Напр. Регистрация на фирма" />
+                  <p data-error-for="topic" class="mt-1 text-xs text-red-600 hidden"></p>
+                </div>
+              </div>
+              <div class="mt-4">
+                <label for="message" class="block text-sm font-medium text-slate-700">Съобщение</label>
+                <textarea id="message" name="message" rows="5" required
+                          class="mt-1 block w-full rounded-md border-slate-300 focus:border-primary-600 focus:ring-primary-600"
+                          placeholder="Разкажете ми накратко за вашия казус..."></textarea>
+                <p data-error-for="message" class="mt-1 text-xs text-red-600 hidden"></p>
+              </div>
+
+              <div class="mt-4 flex items-start gap-2">
+                <input id="consent" name="consent" type="checkbox" required class="mt-1 rounded border-slate-300 text-primary-600 focus:ring-primary-600" />
+                <label for="consent" class="text-sm text-slate-600">Съгласявам се данните ми да бъдат използвани за връзка по заявката.</label>
+              </div>
+              <p data-error-for="consent" class="mt-1 text-xs text-red-600 hidden"></p>
+
+              <div id="formStatus" class="mt-4 hidden rounded border px-3 py-2 text-sm" aria-live="polite"></div>
+
+              <button id="submitBtn" type="submit" class="mt-6 inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 rounded-md bg-primary-600 text-white font-medium hover:bg-primary-700 transition shadow-soft">
+                <svg class="submit-spinner -ml-1 mr-2 h-5 w-5 animate-spin hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4A4 4 0 008 12H4z"></path>
+                </svg>
+                <span class="submit-label">Изпрати</span>
+              </button>
+
+              <p class="mt-4 text-xs text-slate-500">
+                Забележка: за по-надеждно изпращане използваме Google Apps Script и Google Sheets. Вижте README.md за настройка.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-primary-600 text-white font-semibold">Е</span>
+          <span class="font-semibold text-slate-900">Счетоводство Ели</span>
+        </div>
+        <p class="mt-3 text-sm text-slate-600">
+          Професионални счетоводни услуги и консултации за устойчив бизнес растеж.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-semibold text-slate-900">Бързи връзки</h3>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="#services" class="hover:text-primary-700">Услуги</a></li>
+          <li><a href="#about" class="hover:text-primary-700">За мен</a></li>
+          <li><a href="#contact" class="hover:text-primary-700">Контакт</a></li>
+          <li><a href="#" class="hover:text-primary-700">Политика за поверителност</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-slate-900">Контакти</h3>
+        <ul class="mt-3 space-y-2 text-sm text-slate-700">
+          <li>Имейл: <a class="text-primary-700 hover:underline" href="mailto:eli.ivanova.accounting@example.com">eli.ivanova.accounting@example.com</a></li>
+          <li>Телефон: <a class="text-primary-700 hover:underline" href="tel:+359888123456">+359 888 123 456</a></li>
+          <li>Локация: София</li>
+        </ul>
+        <div class="mt-4">
+          <h3 class="font-semibold text-slate-900">Социални мрежи</h3>
+          <div class="mt-2 flex items-center gap-3">
+            <a href="https://instagram.com/your.username" target="_blank" rel="noopener noreferrer" class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#E1306C] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E1306C]" aria-label="Instagram" title="Instagram">
+              <svg class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="6" width="18" height="14" rx="3" ry="3"></rect>
+                <circle cx="12" cy="13" r="4"></circle>
+                <circle cx="18" cy="9" r="1" fill="currentColor" stroke="none"></circle>
+                <path d="M9 6l1.5-3h3L15 6"></path>
+              </svg>
+            </a>
+            <a href="https://facebook.com/your.username" target="_blank" rel="noopener noreferrer" class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#1877F2] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1877F2]" aria-label="Facebook" title="Facebook">
+              <svg class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <text x="12" y="16" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="currentColor">f</text>
+              </svg>
+            </a>
+            <a href="viber://chat?number=%2B359888123456" class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#7360F2] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#7360F2]" aria-label="Viber" title="Viber">
+              <svg class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="14" rx="2" ry="2"></rect>
+                <path d="M7 17l-4 4v-4"></path>
+              </svg>
+            </a>
+            <a href="https://wa.me/359888123456" target="_blank" rel="noopener noreferrer" class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#25D366] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#25D366]" aria-label="WhatsApp" title="WhatsApp">
+              <svg class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v2a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 3.08 4.18 2 2 0 0 1 5.09 2h2a2 2 0 0 1 2 1.72c.12.86.31 1.7.57 2.5a2 2 0 0 1-.45 2.11L7.1 9.91a16 16 0 0 0 6 6l1.58-1.13a2 2 0 0 1 2.11-.45c.8.26 1.64.45 2.5.57A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </a>
+            <a href="mailto:eli.ivanova.accounting@example.com" class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#EA4335] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#EA4335]" aria-label="Gmail" title="Gmail">
+              <svg class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="6" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M22 8L12 15 2 8"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 text-center text-xs text-slate-500">
+      © <span id="yearSpan"></span> Счетоводство Ели. Всички права запазени.
+    </div>
+  </footer>
+
+  <!-- JSON-LD (Schema.org LocalBusiness) за по-добро SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "Счетоводство Ели",
+    "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop",
+    "url": "https://example.com/",
+    "email": "eli.ivanova.accounting@example.com",
+    "telephone": "+359888123456",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "София",
+      "addressCountry": "BG"
+    },
+    "areaServed": "BG",
+    "priceRange": "$$",
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "sameAs": []
+  }
+  </script>
+</body>
+</html>
+
+

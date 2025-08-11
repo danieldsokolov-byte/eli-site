@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Благодарим — съобщението е изпратено | Счетоводство Ели</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#4f46e5" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 600: '#4f46e5', 700: '#4338ca' }
+          },
+          boxShadow: { soft: '0 10px 30px rgba(2,6,23,.08)' }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="antialiased text-slate-800 bg-slate-50">
+  <main class="min-h-screen flex items-center justify-center px-4">
+    <div class="max-w-lg w-full bg-white border border-slate-200 rounded-2xl p-8 shadow-soft text-center">
+      <div class="mx-auto h-14 w-14 rounded-full bg-green-100 text-green-700 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M2.25 12a9.75 9.75 0 1119.5 0 9.75 9.75 0 01-19.5 0zm14.03-2.03a.75.75 0 10-1.06-1.06L10.5 13.63l-1.72-1.72a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.06 0l5.25-5.25z" clip-rule="evenodd"/>
+        </svg>
+      </div>
+      <h1 class="mt-4 text-2xl font-bold text-slate-900">Благодарим ви!</h1>
+      <p class="mt-2 text-slate-700">
+        Съобщението ви беше изпратено успешно. Ще се свържа с вас възможно най-скоро.
+      </p>
+
+      <div class="mt-6 space-y-1 text-sm text-slate-600">
+        <p>Имейл: <a class="text-primary-600 hover:underline" href="mailto:eli.ivanova.accounting@example.com">eli.ivanova.accounting@example.com</a></p>
+        <p>Телефон: <a class="text-primary-600 hover:underline" href="tel:+359888123456">+359 888 123 456</a></p>
+      </div>
+
+      <a href="index.html#home" class="mt-8 inline-flex items-center justify-center px-6 py-3 rounded-md bg-primary-600 text-white hover:bg-primary-700 transition shadow-soft">
+        Обратно към началото
+      </a>
+    </div>
+  </main>
+</body>
+</html>
+
+
