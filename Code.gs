@@ -100,7 +100,8 @@ function validate_(data) {
  */
 function jsonResponse_(obj, statusCode) {
   const output = ContentService.createTextOutput(JSON.stringify(obj))
-    .setMimeType(ContentService.MimeType.JSON);
+    .setMimeType(ContentService.MimeType.JSON)
+    .setStatusCode(statusCode || 200);
   return output;
 }
 
